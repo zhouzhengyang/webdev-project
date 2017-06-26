@@ -15,7 +15,7 @@
         function createManga(manga) {
             var name = manga.title_english;
             var imgUrl = manga.image_url_lge;
-            var mangaId = mange.id;
+            var mangaId = manga.id;
             var newManga = {
                 name: name,
                 imgUrl: imgUrl,

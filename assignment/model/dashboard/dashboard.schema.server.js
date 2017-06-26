@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var dashboardSchema = mongoose.Schema({
-    _user: {type: mongoose.Schema.Types.ObjectId, ref: 'userModel'},
+    _user: {type: mongoose.Schema.Types.ObjectId, ref: 'projectUserModel'},
     name: String,
     imgUrl: String,
     mangaId: String,

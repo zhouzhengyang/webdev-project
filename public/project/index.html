@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ProjectApp">
+<head>
+
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/jquery/dist/jquery-ui.js"></script>
+
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-route.min.js"></script>
+
+    <!--app-->
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+    <!--home-->
+    <script src="views/home/controllers/home.controller.client.js"></script>
+
+    <!--admin-->
+    <script src="views/admin/controllers/admin-users.controller.client.js"></script>
+
+    <!--user-->
+    <script src="views/user/controllers/login.controller.client.js"></script>
+    <script src="views/user/controllers/profile.controller.client.js"></script>
+    <script src="views/user/controllers/register.controller.client.js"></script>
+    <script src="services/user.service.client.js"></script>
+
+    <!--dashboard-->
+    <script src="views/dashboard/controllers/search.controller.client.js"></script>
+    <script src="views/dashboard/controllers/dashboard.controller.client.js"></script>
+    <script src="services/dashboard.service.client.js"></script>
+
+    <!-- textAngular-->
+    <script src="vendor/textAngular/textAngular-rangy.min.js"></script>
+    <script src="vendor/textAngular/textAngular-sanitize.js"></script>
+    <script src="vendor/textAngular/textAngular.min.js"></script>
+    <link href="vendor/textAngular/textAngular.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Theme Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/theme.css" rel="stylesheet">
+</head>
+
+<body>
+    <div ng-view></div>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

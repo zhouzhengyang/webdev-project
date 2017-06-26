@@ -1,0 +1,41 @@
+<div class="container" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="navbar-fixed-top" id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#!/">Project Website</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page -->
+    <div class="container-fluid">
+        <div class="input-group">
+            <input ng-model="searchText"
+                   type="text"
+                   class="form-control">
+            <span class="input-group-btn">
+                <a ng-click="model.searchManga(searchText)" class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+            </span>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4" ng-repeat="manga in model.mangas">
+                <a ng-if="!model.currentUser._id" ng-click="model.createManga(manga)"
+                   class="btn btn-block btn-success">follow</a>
+                <a class="thumbnail" href="https://anilist.co/manga/{{manga.id}}/{{manga.title_english}}">
+                    <h6 class="nowrap">{{manga.title_english}}</h6>
+                    <img ng-src="{{manga.image_url_lge}}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--https://anilist.co/manga/30013/OnePiece-->
+<!--https://anilist.co/manga/Id/Name-->

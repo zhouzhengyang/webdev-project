@@ -1,0 +1,30 @@
+<div class="container" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="navbar-fixed-top" id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#!/">Project Website</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Page -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4" ng-repeat="manga in model.mangas">
+                <a ng-click="model.deleteManga(manga)"
+                   class="btn btn-block btn-danger">unfollow</a>
+                <a class="thumbnail" href="https://anilist.co/manga/{{manga.mangaId}}/{{manga.name}}">
+                    <h6 class="nowrap">{{manga.name}}</h6>
+                    <img ng-src="{{manga.imgUrl}}"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!--https://anilist.co/manga/30013/OnePiece-->
+<!--https://anilist.co/manga/Id/Name-->

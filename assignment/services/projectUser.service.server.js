@@ -24,8 +24,8 @@ app.delete('/api/unregister', unregister);
 app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
 app.get('/auth/google/callback',
     passport.authenticate('google', {
-        successRedirect: '/assignment/index.html#!/profile',
-        failureRedirect: '/assignment/index.html#!/login'
+        successRedirect: '/project/index.html#!/profile',
+        failureRedirect: '/project/index.html#!/login'
     }));
 
 var googleConfig = {
@@ -33,8 +33,8 @@ var googleConfig = {
     //"process.env.GOOGLE_CLIENT_ID",
     clientSecret : "7S_-mJ39iMxAUCkS2k-RUgRE",
     //"process.env.GOOGLE_CLIENT_SECRET",
-    callbackURL  : //"http://zhou-zhengyang-webdev.herokuapp.com/auth/google/callback"
-    "http://localhost:3000/auth/google/callback"
+    callbackURL  : "http://zhou-zhengyang-project.herokuapp.com/auth/google/callback"
+    //"http://localhost:3000/auth/google/callback"
 };
 
 passport.use(new GoogleStrategy(googleConfig, googleStrategy));
@@ -43,8 +43,8 @@ passport.use(new GoogleStrategy(googleConfig, googleStrategy));
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }))
 app.get('/auth/facebook/callback',
     passport.authenticate('facebook', {
-        successRedirect: '/assignment/index.html#!/profile',
-        failureRedirect: '/assignment/index.html#!/login'
+        successRedirect: '/project/index.html#!/profile',
+        failureRedirect: '/project/index.html#!/login'
     }));
 
 var facebookConfig= {
@@ -52,8 +52,8 @@ var facebookConfig= {
     //process.env.MLAB_FACEBOOK_CLIENTID,
     clientSecret : "b7d1dcb76c7e30f06edb02ad7c2e4f54",
     //process.env.MLAB_FACEBOOK_CLIENTSECRET,
-    callbackURL  : //"http://zhou-zhengyang-webdev.herokuapp.com/auth/facebook/callback"
-    "http://localhost:3000/auth/facebook/callback",
+    callbackURL  : "http://zhou-zhengyang-project.herokuapp.com/auth/facebook/callback"
+    //"http://localhost:3000/auth/facebook/callback",
 };
 
 passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));

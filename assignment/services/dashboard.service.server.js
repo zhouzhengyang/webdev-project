@@ -11,8 +11,7 @@ app.get   ('/api/user/:userId/dashboard', findMangaByUserId);
 
 function createManga(req, res) {
     var manga = req.body;
-    var userId = req.params['userId']
-    manga._user = userId;
+    manga._user = req.params['userId'];
     manga.dateCreated = new Date();
     dashboardModel
         .createManga(manga)
